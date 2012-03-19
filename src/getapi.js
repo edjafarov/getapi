@@ -4,7 +4,8 @@ var path = require('path');
 
 // init routes for source folder
 module.exports.init = function(app, folder){
-	var srcFiles = sourceFolderWalker(folder);
+	console.log("Configuring UrlMappings for dir=" + folder);
+    var srcFiles = sourceFolderWalker(folder);
 	for(var i =0 ; i< srcFiles.length; i++){
 		var filepath = fs.realpathSync(srcFiles[i]);
         var meta = metamodule.getMeta(fs.readFileSync(filepath).toString());
@@ -20,6 +21,7 @@ module.exports.init = function(app, folder){
                     meta[name].functionAssigned.args);
                 }
                 app.get(pathToRoute, routeFunction);
+                console.log(pathToRoute+ " route found");
             }
 		}
 	};

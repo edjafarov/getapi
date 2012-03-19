@@ -1,20 +1,17 @@
 var express = require('express');
-var getapi = require('../src/getapi.js');
+var getapi = require('getapi');
 
 var app = express.createServer();
 
 var app = express.createServer(
-   express.static(__dirname + "/public")
-  , express.favicon()
+  express.favicon()
 );
 
 app.configure(function() {
+	getapi.init(app,"./apis")// initialize routes for API's
     app.set('views', __dirname + "/");
     app.set('view engine', 'ejs');
 });
-
-// initialize routes for API's
-getapi.init(app, "./apis");
 
 app.get("/",function(req, res){
 	res.render('public/homepage.ejs');
