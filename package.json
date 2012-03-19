@@ -1,0 +1,14 @@
+{
+  "name": "getapi",
+  "version": "0.0.1",
+  "dependencies": {
+    "metamodule": "0.0.2"
+  },
+  "main":"./src/getapi.js",
+  "author": "Eldar Djafarov",
+  "description": "allows to build API's using annotations",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/edjafarov/getapi.git"
+  }
+}
