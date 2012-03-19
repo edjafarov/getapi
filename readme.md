@@ -11,6 +11,8 @@ module.exports.add = function(req, res, a, b){
 	res.json({result:(parseFloat(a)+parseFloat(b))});
 }
 ```
+see more examples:
+https://github.com/edjafarov/getapi/blob/master/examples/apis/math.js
 
 ## install
 ```
@@ -20,10 +22,11 @@ $npm install getapi -g
 ## use
 
 1) Create you node.js files in some folder.
+
 2) Place comments 
 
 * ```@Route``` - means that this function should handle api call. 
-* ```@UrlMapping (url = '[url]')``` allows you to assign url for the function. You can assign url's in usual express manner with named placeholders. But unlike express if you will name one of arguments of a function same as placeholder function this argument will be resolved.
+* ```@UrlMapping (url = '[url]')``` allows you to assign url for the function. You can assign url's in usual express manner with named placeholders. But unlike express if you will name one of arguments of a function same as placeholder this argument will be resolved.
 
 ```javascript
 /**
