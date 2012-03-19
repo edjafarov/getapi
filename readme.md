@@ -1,7 +1,8 @@
 # getapi - simpliest way to build API
 ## example
 Just add some comments for API to fly
-```
+
+```javascript
 /**
 * @Route 
 * @UrlMapping (url = '/apicall/math/add')
