@@ -53,10 +53,6 @@ var getapi = require('getapi');
 
 var app = express.createServer();
 
-var app = express.createServer(
-  express.favicon()
-);
-
 app.configure(function() {
 	getapi.init(app,"./apis")// initialize routes for API's
     app.set('views', __dirname + "/");
