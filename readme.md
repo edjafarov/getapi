@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/edjafarov/getapi.png)](http://travis-ci.org/edjafarov/getapi)
 # getapi - simpliest way to build API
 ## example
 Just add some comments for API to fly
